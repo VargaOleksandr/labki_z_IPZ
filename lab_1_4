@@ -1,0 +1,41 @@
+// 1. Описати сутність, що містить або не містить ціле десяткове число
+var integerNumber: Int?
+// 2. Описати сутність, що містить або не містить число з плаваючою крапкою
+var decimalNumber: Double?
+// 3. Присвоїти значення числу integerNumber
+integerNumber = 42
+// 4. Додати до числа integerNumber те ж значення, використовуючи increment оператор
+if let value = integerNumber {
+    integerNumber = value + value // Інкрементуємо значення integerNumber на саме себе
+    print("Значення integerNumber після інкременту:", integerNumber!) // Виводимо значення
+}
+// 5. Змінити знак числа на протилежний, використовуючи unary minus оператор
+if let value = integerNumber {
+    integerNumber = -value // Змінюємо знак
+    print("Значення integerNumber після зміни знаку:", integerNumber!) // Виводимо значення
+}
+// 6. Присвоїти значення числу decimalNumber значенням числа integerNumber
+if let value = integerNumber {
+    decimalNumber = Double(value) // Присвоюємо значення integerNumber
+    print("Значення decimalNumber:", decimalNumber!) // Виводимо значення
+}
+// 7. Описати сутність pairOfValues, що містить або не містить значення integerNumber та decimalNumber
+var pairOfValues: (Int?, Double?) = (integerNumber, decimalNumber)
+// 8. Перевірити, чи містить сутність pairOfValues цілочислове значення та вивести його
+if let intValue = pairOfValues.0 {
+    print("Цілочислове значення з pairOfValues:", intValue)
+} else {
+    print("Цілочислове значення відсутнє")
+}
+// 9. Перевірити, чи містить сутність pairOfValues значення, що представлено числом з плаваючою крапкою
+if let doubleValue = pairOfValues.1 {
+    print("Число з плаваючою крапкою з pairOfValues:", doubleValue)
+} else {
+    print("Число з плаваючою крапкою відсутнє")
+}
+// 10. Вивести значення числа decimalNumber використовуючи optional binding
+if let decimalValue = decimalNumber {
+    print("Значення decimalNumber через optional binding:", decimalValue)
+} else {
+    print("decimalNumber відсутнє")
+}
