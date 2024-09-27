@@ -1,0 +1,31 @@
+//1. Ціле десяткове число 12 з мінімально необхідною розрядною сіткою
+let number: Int8 = 12 // тип Int8  має діапазон від -128 до 127
+print(number)
+//2. Ціле десяткове число -100 з мінімально необхідною розрядною сіткою
+let negativeNumber: Int8 = -100
+print(negativeNumber)
+//3. Ціле шістнадцяткове число, що рівне цілому десятковому числу 128
+let hexNumber: UInt = 0x80
+print(hexNumber)
+//4. Мінімальне десяткове значення числа, яке знаходиться у межах 16-розрядної сітки
+let min16BitValue: Int16 = -32768
+print(min16BitValue)
+//5. Максимальне десяткове значення числа, яке знаходиться у межах 64-розрядної сітки
+let max64BitValue: Int64 = 9223372036854775807
+print(max64BitValue)
+//6. Число з плаваючою крапкою 10,235.34 з мінімально необхідною розрядною сіткою
+let floatingNumber: Double = 10235.34
+print(floatingNumber)
+//7. Символ “а”
+let character: Character = "a"
+print(character)
+//8. Рядок “Hello World”
+let stringHelloWorld: String = "Hello world"
+print(stringHelloWorld)
+//9. Істина
+let isTrue: Bool = true
+print(isTrue)
+//10. Число 12 та його рядкове представлення “twelve”
+let numberValue: Int = 12
+let numberString: String = "twelve"
+print(numberValue, numberString)
