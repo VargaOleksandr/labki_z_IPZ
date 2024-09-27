@@ -1,0 +1,50 @@
+var sentence = "Hello World. This is Swift programming language"
+//1. Визначити та вивести на екран довжину рядка
+print("Довжина рядка:", sentence.count)
+//2. Замінити кожне входження символа “i” на символ “u”
+var newSentence = ""
+for character in sentence {
+    if character == "i" {
+        newSentence.append("u")
+    } else {
+        newSentence.append(character)
+    }
+}
+sentence = newSentence
+print("Після заміни 'i' на 'u':", sentence)
+//3. Видалити 4-й, 7-й та 10-й символи
+let remove = [3, 6, 9] // Індекси 4-го, 7-го і 10-го символів
+for index in remove.sorted(by: >) {
+    let position = sentence.index(sentence.startIndex, offsetBy: index)
+    sentence.remove(at: position)
+}
+print("Після видалення 4-го, 7-го та 10-го символів:", sentence)
+//4.Додати рядок “ (modified)” до існуючого рядка
+sentence += " (modified)"
+print("Після додавання '(modified)':", sentence)
+//5. Вивести значення, що визначає чи існуючий рядок є пустим
+print("Чи є рядок порожнім:", sentence.isEmpty)
+//6. Додати символ “.” до кінця існуючого рядка
+sentence += "."
+print("Після додавання '.':", sentence)
+//7. Вивести значення, що визначає чи рядок починається з підрядка “Hello”
+print("Чи починається рядок з 'Hello':", sentence.hasPrefix("Hello"))
+//8. Вивести значення, що визначає чи рядок закінчується підрядком “world.”
+print("Чи закінчується рядок на 'world.':", sentence.hasSuffix("world."))
+//9. Вставити символ “-” після 10-го символа
+let position = sentence.index(sentence.startIndex, offsetBy: 10)
+sentence.insert("-", at: position)
+print("Після вставки '-' після 10-го символа:", sentence)
+//10. Замінити послідовність “Thus us” послідовністю “It is”
+sentence = sentence.replacingOccurrences(of: "Thus us", with: "It is")
+print("Після заміни 'Thus us' на 'It is':", sentence)
+//11. Вивести 10-й та 15-й символи існуючого рядка
+let tenth = sentence[sentence.index(sentence.startIndex, offsetBy: 9)]
+let fifteenth = sentence[sentence.index(sentence.startIndex, offsetBy: 14)]
+print("10-й символ:", tenth)
+print("15-й символ:", fifteenth)
+//12. Вивести підрядок, що знаходиться у межах 10-го (включно) та 15-го (невключно) символів
+let startIndex = sentence.index(sentence.startIndex, offsetBy: 9)
+let endIndex = sentence.index(sentence.startIndex, offsetBy: 14)
+let substring = sentence[startIndex..<endIndex]
+print("Підрядок з 10-го по 15-й символ:", substring)
